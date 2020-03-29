@@ -1,0 +1,15 @@
+[Unit]
+Description=Discord BBot
+After=network.target
+
+[Service]
+Type=simple
+# Another Type option: forking
+User=root
+WorkingDirectory=/root/git/Discord-BBot
+ExecStart=/root/git/Discord-BBot/runService.sh
+Restart=on-failure
+# Other Restart options: or always, on-abort, etc
+
+[Install]
+WantedBy=multi-user.target
