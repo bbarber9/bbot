@@ -8,10 +8,10 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
+    "@discordjs/opus": "^0.1.0",
     "@types/node": "^13.9.5",
     "@types/ws": "^7.2.3",
-    "discord.js": "discordjs/discord.js",
-    "dotenv": "^8.2.0",
-    "node-opus": "^0.3.3"
+    "discord.js": "^12.1.1",
+    "dotenv": "^8.2.0"
   }
 }
