@@ -13,14 +13,16 @@ export const registerCommands = () => {
     "joinVoice",
     "leaveVoice",
     "sb",
-    "sbList"
+    "sbList",
+    "dtp",
+    "dtpcancel",
   ];
-  const loadPromises = commandsToRegister.map(cmdName => {
+  const loadPromises = commandsToRegister.map((cmdName) => {
     return import(`${cmdPath}${cmdName}`)
-      .then(cmdModule => {
+      .then((cmdModule) => {
         cmdParser.registerCommand(cmdName, cmdModule[cmdName]);
       })
-      .catch(e => {
+      .catch((e) => {
         console.error(`Failed to load command ${cmdName}`, e);
       });
   });
